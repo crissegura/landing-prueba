@@ -1,0 +1,181 @@
+body{
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.inicio{
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.400),rgba(0, 0, 0, 0.534)),url('https://www.infobae.com/new-resizer/CVbApC0UDH1tGBDSmRF7If3NtYk=/1200x900/filters:format(webp):quality(85)/s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2017/07/31141652/vacaciones-1920-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.logo{
+    width: 10rem;
+    padding: 1rem;
+}
+
+.contenedorInicio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ffff;
+    text-shadow: 0px 2px 2px black;
+}
+
+.formulario{
+    width: 25rem;
+    color: #ffff;
+    background-color: #ffffff3f;
+    padding: 2rem;
+    border-radius: 1rem;
+    border-top: solid 1px #ffffff79;
+    border-right:solid 1px #ffffff79;
+}
+
+.tituloFormulario{
+    text-shadow: 0px 2px 2px black;
+}
+
+.textoPromocional{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: .5rem;
+    color: rgb(8, 8, 65);
+}
+
+.contenedorTarjetas{
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.tarjeta{
+    text-align: left;
+    margin: 2rem;
+}
+
+.headerTarjeta{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.tituloCard{
+    color: rgb(8, 8, 65);
+    font-size: 1.5rem;
+    width: 70%;
+}
+
+.subtituloCard{
+    padding-top: .5rem;
+    color: rgb(8, 8, 65);
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+ol{
+    color: rgb(8, 8, 65);
+    font-size: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer{
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.11);
+    color: rgb(8, 8, 65);
+    font-size: 1.5rem;
+}
+
+.btn-w{
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.img-w{
+    width: 5rem;
+}
+
+@media screen and (max-width:540px){
+    .logo{
+        width: 8rem;
+    }
+    .contenedorInicio{
+        min-height: 80vh;
+    }
+    .titulo{
+        font-size: 3rem;
+    }
+    .formulario{
+        width: 20rem;
+    }
+    .textoPromocional{
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+/* ANIMACIONES */
+.tarjeta{
+
+    view-timeline-name: --tarjeta;
+    view-timeline-axis: block;
+
+    animation-timeline: --tarjeta;
+    animation-name: mostrar;
+
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+@keyframes mostrar{
+    from{
+        opacity: 0;
+        scale: 25%;
+        transform: translateX(-500px);
+    }
+    to{
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+.logo,.formulario,.titulo{
+    animation: mover-arr-aba 1.5s 1;
+}
+
+
+@keyframes mover-arr-aba {
+    0%{
+        transform: translateY(-500px);
+    }
+}
+
+.btn-w{
+    animation: mover-der-izq 1.5s 1;
+}
+
+@keyframes mover-der-izq {
+    0%{
+        transform: translateX(100px);
+    }
+}
