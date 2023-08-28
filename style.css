@@ -135,30 +135,6 @@ ol{
 }
 
 /* ANIMACIONES */
-.tarjeta{
-
-    view-timeline-name: --tarjeta;
-    view-timeline-axis: block;
-
-    animation-timeline: --tarjeta;
-    animation-name: mostrar;
-
-    animation-range: entry 25% cover 50%;
-    animation-fill-mode: both;
-}
-
-@keyframes mostrar{
-    from{
-        opacity: 0;
-        scale: 25%;
-        transform: translateX(-500px);
-    }
-    to{
-        opacity: 1;
-        scale: 100%;
-    }
-}
-
 .logo,.formulario,.titulo{
     animation: mover-arr-aba 1.5s 1;
 }
