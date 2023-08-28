@@ -135,7 +135,7 @@ ol{
 }
 
 /* ANIMACIONES */
-.logo,.formulario,.titulo{
+.formulario,.titulo{
     animation: mover-arr-aba 1.5s 1;
 }
 
@@ -146,12 +146,22 @@ ol{
     }
 }
 
+.logo{
+    animation: mover-izq-der 1.5s 1;
+}
+
+@keyframes mover-izq-der{
+    0%{
+        transform: translateX(-200px);
+    }
+}
+
 .btn-w{
     animation: mover-der-izq 1.5s 1;
 }
 
 @keyframes mover-der-izq {
     0%{
-        transform: translateX(100px);
+        transform: translateX(200px);
     }
 }
